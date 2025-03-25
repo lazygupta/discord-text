@@ -13,13 +13,13 @@ export function HeroText() {
         });
     };
     const words = `Transform messages into stylish Discord messages with our easy-to-use generator.`;
+
     return (
         <Container className={classes.wrapper} size={1400}>
             <Dots className={classes.dots} style={{ left: 0, top: 0 }} />
             <Dots className={classes.dots} style={{ left: 60, top: 0 }} />
             <Dots className={classes.dots} style={{ left: 0, top: 140 }} />
             <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
-
 
             <div className={classes.inner}>
                 <Box className='flex justify-center text-6xl flex-wrap items-center'>
@@ -29,9 +29,17 @@ export function HeroText() {
                     </div>
                 </Box>
 
-                <div className='flex-col justify-center items-center  text-center'>
+                <div className='flex-col justify-center items-center text-center'>
                     <TextGenerateEffect words={words} />
-                    <Text c="dimmed">Add <ColourfulText text="colors" /> ,styles ,and make your messages looks cool!</Text>
+                    <Text c="dimmed">Add <ColourfulText text="colors" />, styles, and make your messages look cool!</Text>
+                </div>
+
+                {/* Instructions Section */}
+                <div className='flex flex-col items-center mt-16 text-center'>
+                    <Title size={28}>How to Use It</Title>
+                    <Text c="dimmed" mt={8}>
+                        Write your text, select parts of it, and assign colors to them. Then, copy it using the button below and send it in a Discord message.
+                    </Text>
                 </div>
 
                 <div className='flex justify-center mt-10'>
@@ -44,8 +52,9 @@ export function HeroText() {
                     >
                         Try Now <ArrowDown />
                     </Button>
-
                 </div>
+
+                
             </div>
         </Container>
     );
