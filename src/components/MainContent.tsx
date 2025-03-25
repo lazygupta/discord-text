@@ -41,9 +41,9 @@ const bg_colors = [
 ];
 
 const Main = () => {
-  const [text, setText] = useState("Made with ♥ from lazyrabbit");
+  const [text] = useState("Made with ♥ from lazyrabbit");
   const textareaRef = useRef<HTMLDivElement>(null);
-  const [opened, { open, close }] = useDisclosure(false);
+  const [opened, { close }] = useDisclosure(false);
 
   // applying style
   const applyStyle = (styleType: 'fg' | 'bg' | 'style', value: string) => {
