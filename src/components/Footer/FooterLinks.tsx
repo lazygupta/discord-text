@@ -25,7 +25,7 @@ const data = [
     title: 'Community',
     links: [
       { label: 'Join Discord', link: '#' },
-      { label: 'Follow on Twitter', link: '#' },
+      { label: 'Follow on Twitter', link: 'https://x.com/lazygupta_' },
       { label: 'Email newsletter', link: '#' },
       { label: 'GitHub discussions', link: '#' },
     ],
