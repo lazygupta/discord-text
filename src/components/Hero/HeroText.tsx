@@ -6,6 +6,12 @@ import { ArrowDown } from 'lucide-react';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 
 export function HeroText() {
+    const handleScroll = () => {
+        window.scrollBy({
+            top: 200, // Adjust the value as per your requirement
+            behavior: "smooth", // Smooth scrolling effect
+        });
+    };
     const words = `Transform messages into stylish Discord messages with our easy-to-use generator.`;
     return (
         <Container className={classes.wrapper} size={1400}>
@@ -14,8 +20,6 @@ export function HeroText() {
             <Dots className={classes.dots} style={{ left: 0, top: 140 }} />
             <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
 
-            
-            
 
             <div className={classes.inner}>
                 <Box className='flex justify-center text-6xl flex-wrap items-center'>
@@ -26,15 +30,21 @@ export function HeroText() {
                 </Box>
 
                 <div className='flex-col justify-center items-center  text-center'>
-                <TextGenerateEffect words={words} />
+                    <TextGenerateEffect words={words} />
                     <Text c="dimmed">Add <ColourfulText text="colors" /> ,styles ,and make your messages looks cool!</Text>
                 </div>
 
                 <div className='flex justify-center mt-10'>
-                    <Button className={classes.control} size="lg" variant="default" color="gray">
-                        Try Now <ArrowDown/>
+                    <Button
+                        className="control"
+                        size="lg"
+                        variant="default"
+                        color="gray"
+                        onClick={handleScroll}
+                    >
+                        Try Now <ArrowDown />
                     </Button>
-                    
+
                 </div>
             </div>
         </Container>
