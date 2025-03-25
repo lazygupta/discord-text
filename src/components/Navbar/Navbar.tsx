@@ -1,17 +1,13 @@
 import {
-  ActionIcon,
   Box,
   Group,
   Title,
-  useMantineColorScheme,
 } from '@mantine/core';
-import { Moon, Sun } from 'lucide-react';
 import classes from './HeaderMegaMenu.module.css';
 import { ColourfulText } from '../ui/colourful-text';
+import { ActionToggle } from '../ActionToggle/ActionToggle';
 
 export function HeaderMegaMenu() {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const isDark = colorScheme === 'dark';
 
   return (
     <Box pb={80}>
@@ -26,16 +22,10 @@ export function HeaderMegaMenu() {
           <Title order={2} className="gradient-text" fw={800}>
             <ColourfulText text="Discord Colored Text Generator" />
           </Title>
+          <div className='hidden sm:block'>
+            <ActionToggle />
+          </div>
 
-          <ActionIcon
-            onClick={toggleColorScheme}
-            size="lg"
-            variant="outline"
-            color={isDark ? 'yellow' : 'blue'}
-            style={{ borderRadius: '50%' }}
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </ActionIcon>
         </Group>
       </header>
     </Box>

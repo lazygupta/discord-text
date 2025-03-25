@@ -30,7 +30,7 @@ export function HeroText() {
                     <Text c="dimmed">Add <ColourfulText text="colors" /> ,styles ,and make your messages looks cool!</Text>
                 </div>
 
-                <div className={classes.controls}>
+                <div className='flex justify-center mt-10'>
                     <Button className={classes.control} size="lg" variant="default" color="gray">
                         Try Now <ArrowDown/>
                     </Button>
